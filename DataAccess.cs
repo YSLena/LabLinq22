@@ -16,28 +16,36 @@ namespace LabLinq22
     internal class DataAccess
     {
         // TODO 1
-        /* Лабораторная работа посвящена использованию языка
-         * LINQ - Language-Integrated Query
-         * для выполнения запросов к различным источникам данных
-         * 
-         * На основе приведенных примеров постройте свои запросы
-         * в соответствии с вариантом задания
-         * После каждого упражнения программа должна
-         * компилироваться и запускаться
-         * 
-         * Дополнительные сведения о языке LINQ
-         * можно почерпнуть в документации MSDN:
-         * https://learn.microsoft.com/ru-ru/dotnet/csharp/linq/
-         */
+        /* Лабораторна робота присвячена використанню мови
+        * LINQ - Language-Integrated Query
+        * для виконання запитів до різних джерел даних
+        *
+        * На основі наведених прикладів побудуйте свої запити
+        * відповідно до варіанта завдання
+        * Після кожної вправи програма повинна
+        * компілюватися та запускатися
+        * 
+        * ВАЖЛИВО!
+        * Всі методи прив'язані до інтерфейсу форми
+        * Всі завдання виконуйте в методах з назвами типу Query21(), замінюючи 
+        *            return null;
+        * на свій запит. 
+        * Якшо будете створювати свої методи, результати не будуть відображатися на формі
+        * 
+        * Методи з назвами типу Query21Example() - це приклади запитів
+        * Їх не треба змінювати
+        * 
+        * Додаткові відомості про мову LINQ
+        * можна отримати в документації MSDN:
+        * https://learn.microsoft.com/ru-ru/dotnet/csharp/linq/
+        */
 
-        // Определение источника данных
-        // Собственно, это и есть модель данных
-
+        // Визначення джерела даних
+        // Власне, це і є модель даних
         public FacultyContext context = new FacultyContext();
 
-        // TODO 2 
-        // Упражнение 2
-        // Используется проекция
+        // TODO 2. Проекція
+        // Виконайте вправу 2 з ЛР 1
 
         // TODO 2.1. Проекция на анонимный класс
 
@@ -97,8 +105,9 @@ namespace LabLinq22
         }
 
 
-        // TODO 3
-        // Упражнение 3. Упорядочивание данных
+        // TODO 3. Упорядкування даних
+        // Виконайте вправу 4 з ЛР 1
+
         public object Query3Example()
         {
             var query =
@@ -113,8 +122,9 @@ namespace LabLinq22
             return null;
         }
 
-        // TODO 4 
-        // Упражнение 4. Фильтрация данных
+        // TODO 4. Фільтрація даних
+        // Виконайте вправу 6 з ЛР 1
+
         public object Query4Example()
         {
             var query =
@@ -130,8 +140,8 @@ namespace LabLinq22
             return null;
         }
 
-        // TODO 5 
-        // Упражнение 5. Застосування мтодів розширення
+        // TODO 5. Методи розширення
+
 
         // Синтаксис запроса
         public object Query51Example()
@@ -145,7 +155,7 @@ namespace LabLinq22
             {
                 Surnane = st.Surname,
                 Absenses = st.Absences,
-                UnreedyLabs = st.UnreadyLabs
+                UnredyLabs = st.UnreadyLabs
             }
             ).Distinct();
             return query.ToList();
@@ -164,9 +174,9 @@ namespace LabLinq22
                 {
                     Surnane = st.Surname,
                     Absenses = st.Absences,
-                    UnreedyLabs = st.UnreadyLabs
+                    UnredyLabs = st.UnreadyLabs
                 }
-                ).OrderBy(s => s.UnreedyLabs).ThenBy(s => s.Absenses).Distinct()
+                ).OrderBy(s => s.UnredyLabs).ThenBy(s => s.Absenses).Distinct()
                 .ToList();
         }
 
@@ -175,8 +185,7 @@ namespace LabLinq22
             return null;
         }
 
-        // TODO 6
-        // Вычисление агрегатных функций при помощи методов расширения и лямбда-выражений
+        // TODO 6. Використання делегатів та лямбда-виразів
 
         // TODO 6.1
         // Использование метода расширения с делегатом

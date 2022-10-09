@@ -24,6 +24,8 @@ namespace LabLinq22.Models
         public virtual DbSet<Subject> Subjects { get; set; } = null!;
         public virtual DbSet<Tutor> Tutors { get; set; } = null!;
 
+        // TODO 1.1
+        // Замініть строку з'єднання
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
