@@ -45,6 +45,7 @@ namespace LabLinq22
         public FacultyContext context = new FacultyContext();
 
         // TODO 2. Проекція
+        // https://brainoteka.com/courses/linq/viborka-i-proecirovanie
         // Виконайте вправу 2 з ЛР 1
 
         // TODO 2.1. Проекция на анонимный класс
@@ -106,6 +107,7 @@ namespace LabLinq22
 
 
         // TODO 3. Упорядкування даних
+        // https://learn.microsoft.com/ru-ru/dotnet/csharp/programming-guide/concepts/linq/sorting-data
         // Виконайте вправу 4 з ЛР 1
 
         public object Query3Example()
@@ -123,6 +125,7 @@ namespace LabLinq22
         }
 
         // TODO 4. Фільтрація даних
+        // https://learn.microsoft.com/ru-ru/dotnet/csharp/programming-guide/concepts/linq/filtering-data
         // Виконайте вправу 6 з ЛР 1
 
         public object Query4Example()
@@ -141,9 +144,14 @@ namespace LabLinq22
         }
 
         // TODO 5. Методи розширення
-
+        // https://learn.microsoft.com/ru-ru/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+        // Перелік методів:
+        // https://learn.microsoft.com/ru-ru/dotnet/api/system.linq.enumerable?view=net-6.0#methods
+        // https://metanit.com/sharp/tutorial/15.1.php
 
         // Синтаксис запроса
+        // https://learn.microsoft.com/ru-ru/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq
+
         public object Query51Example()
         {
             var query =
@@ -186,6 +194,8 @@ namespace LabLinq22
         }
 
         // TODO 6. Використання делегатів та лямбда-виразів
+        // https://learn.microsoft.com/ru-ru/dotnet/standard/delegates-lambdas
+
 
         // TODO 6.1
         // Использование метода расширения с делегатом
@@ -211,7 +221,9 @@ namespace LabLinq22
         }
 
         // TODO 6.2 
-        // Использование метода лямбда-выражений
+        // Использование лямбда-выражений
+        // https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/lambda-expressions
+        // https://www.williamspublishing.com/PDF/978-5-8459-1909-0/part.pdf
 
         public int Query62Example()
         {
